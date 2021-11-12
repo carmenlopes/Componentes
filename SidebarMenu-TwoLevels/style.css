@@ -57,21 +57,15 @@ ul{
   overflow: auto;
 }
 .sidebar.close .nav-links{
-  overflow: visible;
+  overflow: scroll;
 }
 
-@media (height : 600) {
-  .sidebar .nav-links::-webkit-scrollbar{
-    display: none;
-  }
-}
 .sidebar .nav-links::-webkit-scrollbar{
   width: 5px;
 }
 
 .sidebar .nav-links::-webkit-scrollbar-track{
   background:transparent;
-
 }
 
 .sidebar .nav-links::-webkit-scrollbar-thumb{
@@ -184,14 +178,45 @@ ul{
   transform: translateY(-50%);
 }
 
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-/* TESTES PARA MENU DE NIVEL 2 */
+/* ------MENU NIVEL 2 -----*/
+
+.sidebar .nav-links li .sub-menu .sublink_name{
+  color:  rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu-n2 li a{
+  height: 30px;
+}
+
+.sidebar .nav-links li .sub-menu-n2 li i{
+  height: 50px;
+  min-width: 30px;
+  text-align: center;
+  color: rgb(184, 182, 182);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
 
 
+/* ----- FIM NIVEL 2 ----*/
 
-
-/* FIM DOS TESTES MENU NIVEL 2 */
 .home-section{
   position: relative;
   background: #E4E9F7;
@@ -225,11 +250,10 @@ ul{
   cursor: pointer;
   color: black;
   position: relative;
-  
 }
 
 .home-content .nav-right ul li.nr_li:hover{
-  color: #cefffc;
+  color: #0c63d6;
 }
 
 .home-content .nav-right ul li.user{
@@ -248,13 +272,25 @@ ul{
 }
 
 .home-content .dd_menu .dd_right li{
- padding: 15px 20px;
+ padding: 7px 20px;
+ height: 100%;
 }
 
-.home-content .dd_menu li{
-  line-height: 20px;
-  color: #868686;
+.home-content .dd_menu .dd_right li a{
+  text-decoration: none;
+ }
+
+.home-content .dd_menu .dd_right li a:hover{
+  color: #0c63d6;
+  
 }
+
+ 
+
+/* .home-content .dd_menu li{
+  line-height: 20px;
+  color: #a82929;
+} */
 
 .home-content .dd_menu:before{
   content: '';
@@ -266,6 +302,7 @@ ul{
 }
 
 .home-content .nav-right ul li.dropdown.active .dd_menu{
+  box-shadow: 0px 10px 13px -4px rgb(0 0 0 / 20%);
   display: flex;
 }
 
@@ -286,4 +323,26 @@ ul{
   .sidebar.close .nav-links li .sub-menu{
     display: none;
   }
+}
+
+.home-content .nav-left > ul {
+  display: flex;
+  align-items: center;
+}
+
+.home-content .nav-left li{
+  margin-right: 5px;
+}
+.search{
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+
 }
