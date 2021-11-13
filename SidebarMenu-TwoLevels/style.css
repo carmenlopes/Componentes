@@ -57,7 +57,7 @@ ul{
   overflow: auto;
 }
 .sidebar.close .nav-links{
-  overflow: scroll;
+  overflow: visible;
 }
 
 .sidebar .nav-links::-webkit-scrollbar{
@@ -213,8 +213,6 @@ ul{
   transition: all 0.3s ease;
 }
 
-
-
 /* ----- FIM NIVEL 2 ----*/
 
 .home-section{
@@ -240,15 +238,29 @@ ul{
   box-shadow: 0 0 4px rgb(79 106 206 / 93%);
 }
 
+.home-content .nav-left > ul {
+  display: flex;
+  align-items: center;
+}
+
+.home-content .nav-left li{
+  margin-right: 5px;
+}
+
 .home-content .nav-right > ul {
   display: flex;
   align-items: center;
 }
 
+.home-content .nav-right ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: #11101d;
+}
+
 .home-content .nav-right ul li.nr_li{
   margin-left: 25px;
   cursor: pointer;
-  color: black;
   position: relative;
 }
 
@@ -268,29 +280,8 @@ ul{
   border-radius: 0 0 10px 10px;
   display: none;
   transform: translateY(3%);
-
+  padding: 11px;
 }
-
-.home-content .dd_menu .dd_right li{
- padding: 7px 20px;
- height: 100%;
-}
-
-.home-content .dd_menu .dd_right li a{
-  text-decoration: none;
- }
-
-.home-content .dd_menu .dd_right li a:hover{
-  color: #0c63d6;
-  
-}
-
- 
-
-/* .home-content .dd_menu li{
-  line-height: 20px;
-  color: #a82929;
-} */
 
 .home-content .dd_menu:before{
   content: '';
@@ -301,9 +292,27 @@ ul{
   /* border-color: transparent transparent rgb(91, 149, 226) transparent; */
 }
 
+.home-content .dd_menu li{
+ height: 100%;
+}
+
+.home-content .dd_menu li a{
+  text-decoration: none;
+  color: #212427;
+}
+
+.home-content .dd_menu li a:hover{
+  color: #0c63d6;
+}
+
+.home-content .dd_menu li a i{
+  margin-right: 10px;
+}
+
 .home-content .nav-right ul li.dropdown.active .dd_menu{
   box-shadow: 0px 10px 13px -4px rgb(0 0 0 / 20%);
   display: flex;
+
 }
 
 .home-section .home-content .bx-menu,
@@ -325,14 +334,6 @@ ul{
   }
 }
 
-.home-content .nav-left > ul {
-  display: flex;
-  align-items: center;
-}
-
-.home-content .nav-left li{
-  margin-right: 5px;
-}
 .search{
   display: block;
   width: 100%;
@@ -343,6 +344,5 @@ ul{
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-
+  border-radius: 3.25rem;
 }

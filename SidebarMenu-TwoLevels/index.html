@@ -339,15 +339,15 @@
           <li>
             <input class="search" placeholder="Buscar valores"/>
           </li>
-          <li><span>Exportar</span></li>
-          </ul>
-        </div>
+        </ul>
+      </div>
       <div class="nav-right">
         <ul>
+            <li class="nr_li"><a href="#">Exportar</a></li>
             <li class="nr_li">Tabelas</li>
             <li class="nr_li dropdown">
                 <a class="user"> Nome Usuario <i class='bx bxs-chevron-down arrow'></i></a>
-                <div class="dd_menu">
+                <div id="drop" class="dd_menu">
                     <div class="dd_right">
                       <ul>
                           <li><a href=""><i class='bx bxs-user-account'></i>Admin</a></li>
@@ -363,10 +363,14 @@
   <script>
 
     let dropdown = document.querySelector(".dropdown");
-    let disableMouseOver= false;
+    let drop = document.querySelector("#drop");
 
     dropdown.addEventListener("click", function(e){
       this.classList.toggle("active");
+    });
+
+    drop.addEventListener("mouseleave",()=>{
+      dropdown.classList.remove("active");
     });
 
     let sidebar = document.querySelector(".sidebar");
